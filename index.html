@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .btn {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mi CV</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#about-me">Acerca de mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experiencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main class="container">
+  <section id="about-me">
+    <div class="row">
+      <div class="col-md-3">
+        <img class="img-fluid rounded-circle" src="https://randomuser.me/api/portraits/men/27.jpg" alt="Foto de Luis Smith">
+      </div>
+      <div class="col-md-9">
+        <h1>Luis Smith</h1>
+        <h2>Jardinero, pastelero y comediante</h2>
+        <p>Juntó flores en Tucumán (Argentina) y trabajó en el Hotel Hilton durante 20 años. Ahora se dedica a hacer stand up comedy.</p>
+        <p>Fecha de nacimiento: 12/4/1972</p>
+        <p>Dirección: 6943 Bollinger Rd</p>
+        <p>Teléfono: (254) 439-6118</p>
+        <p>Email: luis.smith@example.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h1>Experiencia laboral</h1>
+    <ul>
+      <li>
+        <h2>Hotel Hilton</h2>
+        <h3>Jardinero</h3>
+        <p>Duración: 1990-2010</p>
+        <p>Descripción: Mantenimiento y cuidado de jardines y espacios verdes del hotel.</p>
+      </li>
+      <li>
+        <h2>Teatro Nacional</h2>
+        <h3>Comediante</h3>
+        <p>Duración: 2010-presente</p>
+        <p>Descripción: Espectáculos de comedia en vivo en el Teatro Nacional.</p>
+      </li>
+      <li>
+        <h2>Panadería Smith</h2>
+        <h3>Pastelero</h3>
+        <p>Duración: 1985-1990</p>
+        <p>Descripción: Elaboración de postres y panes para la panadería.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h1>Habilidades</h1>
+    <ul>
+      <li>Jardinería</li>
+      <li>Pastelería</li>
+      <li>Comedia</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h1>Contacto</h1>
+    <p>Para contactar a Luis Smith, llame al 555-1234 o envíe un correo electrónico a luis.smith@example.com.</p>
+  </section>
+</main>
+
+<script>
+  const buttons = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
+  
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      sections[index].classList.add('active');
+    });
+  });
+</script>
+</html>
